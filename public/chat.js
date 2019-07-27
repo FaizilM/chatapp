@@ -2,9 +2,10 @@
 $(function(){
 
 	var server_ip = $("#server_ip")
-	if (server_ip) {
+	console.log(server_ip.val())
+	if (server_ip.val()) {
 		//make connection
-		var socket = io.connect('http://'+server_ip+':3000')
+		var socket = io.connect('http://'+server_ip.val()+':3000')
 
 		//buttons and inputs
 		var message = $("#message")
